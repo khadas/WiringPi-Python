@@ -119,7 +119,7 @@ Get/setup repo
 
 .. code:: bash
 
-    git clone --recursive https://github.com/WiringPi/WiringPi-Python.git
+    git clone --recursive https://github.com/khadas/WiringPi-Python.git
     cd WiringPi-Python
 
 Don't forget the ``--recursive``; it is required to also pull in the
@@ -135,7 +135,7 @@ to the ``gpio`` tool.
 
 .. code:: bash
 
-    sudo apt-get install python-dev python-setuptools swig wiringpi
+    sudo apt-get install python-dev python-setuptools swig
 
 Build & install with
 --------------------
@@ -146,3 +146,14 @@ Or Python 3:
 
 ``sudo python3 setup.py install``
 
+Build debian package
+--------------------
+
+.. code:: bash
+
+    sudo apt-get update
+    sudo apt-get install fakeroot python3-all-dev debhelper
+    pip3 install stdeb
+    python3 setup.py --command-packages=stdeb.command sdist_dsc --debian-version 3 bdist_deb
+
+You will find debian package in deb_dist.
