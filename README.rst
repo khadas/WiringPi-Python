@@ -135,7 +135,12 @@ to the ``gpio`` tool.
 
 .. code:: bash
 
-    sudo apt-get install python-dev python-setuptools swig
+python2:
+
+    ``sudo apt-get install python-dev python-setuptools swig``
+
+Or python3:
+    ``sudo apt-get install python3-dev python3-setuptools swig``
 
 Build & install with
 --------------------
@@ -152,7 +157,7 @@ Build debian package
 .. code:: bash
 
     sudo apt-get update
-    sudo apt-get install fakeroot python3-all-dev debhelper
+    sudo apt-get install fakeroot python3-all-dev debhelper python3-pip dh-python
     pip3 install stdeb
     python3 setup.py --command-packages=stdeb.command sdist_dsc --debian-version 3 bdist_deb
 
