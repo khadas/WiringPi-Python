@@ -157,7 +157,7 @@ Build debian package
 .. code:: bash
 
     sudo apt-get update
-    sudo apt-get install fakeroot python3-all-dev debhelper python3-pip dh-python
+    sudo apt-get install fakeroot python3-all-dev debhelper python3-pip dh-python swig
     pip3 install stdeb
     python3 setup.py --command-packages=stdeb.command sdist_dsc --debian-version 3 bdist_deb
 
