@@ -60,7 +60,7 @@ _wiringpi = Extension(
 
 setup(
     name = 'wiringpi',
-    version = '3.13',
+    version = '3.14',
     ext_modules = [ _wiringpi ],
     py_modules = ["wiringpi"],
     install_requires=[],
