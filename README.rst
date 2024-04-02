@@ -159,6 +159,18 @@ Build debian package
     sudo apt-get update
     sudo apt-get install fakeroot python3-all-dev debhelper python3-pip dh-python swig
     pip3 install stdeb
-    python3 setup.py --command-packages=stdeb.command sdist_dsc --debian-version 3 bdist_deb
+    ./build-deb.sh
+
+
+Build debian package on Ubuntu 24.04 (Python 3.12)
+--------------------
+
+.. code:: bash
+
+    sudo apt-get update
+    sudo apt-get install fakeroot python3-all-dev debhelper python3-pip dh-python swig python3-stdeb dwz
+    sed -i  's/SafeConfigParser/RawConfigParser/g'  /usr/lib/python3/dist-packages/stdeb/util.py
+    ./build-deb.sh
+
 
 You will find debian package in deb_dist.
