@@ -163,7 +163,7 @@ Build debian package
 
 
 Build debian package on Ubuntu 24.04 (Python 3.12)
---------------------
+--------------------------------------------------
 
 .. code:: bash
 
